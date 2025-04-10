@@ -4,29 +4,31 @@ import TextChange from "../TextChange";
 
 const Home = () => {
   return (
-    <div className="text-white flex w-full justify-start ml-[6rem] items-center p-10 md:p-20">
-      <div className="md:w-2/4 md:pt-10 ">
-        <h1 className="text-xl md:text-6xl font-bold flex leading-normal tracking-tighter">
+    <div className="text-white flex flex-col-reverse md:flex-row w-full justify-between items-center p-6 md:p-20" id="Home">
+      {/* Left Content */}
+      <div className="w-full md:w-1/2 pt-10 md:pt-0 text-center md:text-left">
+        <h1 className="text-2xl md:text-6xl font-bold leading-snug tracking-tight">
           <TextChange />
         </h1>
-        <br/>
-       
-        <p className="text-sm md:text-2xl tracking-tight ">
-        I'm Ajay Singh, a full-stack developer skilled in React, Node.js, C++, SQL.
-        I'm passionate about building efficient, user-friendly web applications and constantly exploring new technologies to enhance my development skills.
+
+        <p className="text-sm md:text-xl tracking-tight mt-6">
+          I'm Ajay Singh, a full-stack developer skilled in React, Node.js, C++, and SQL.
+          I'm passionate about building efficient, user-friendly web applications and constantly exploring new technologies to enhance my development skills.
         </p>
-       
-        <button className="mt-5 md:md-10 text-white py02 px-3 text-sm md:text-lg md:py-2 md:px-4 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
+
+        <button className="mt-6 text-white text-sm md:text-lg py-2 px-5 hover:opacity-85 duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]">
           Contact Me
         </button>
       </div>
- 
+
+      {/* Avatar Image */}
+      <div className="mb-8 md:mb-0">
       <img
-      className="w-[18rem] h-auto ml-[2.5rem] rounded-full object-cover "
-     src={avatarImg}
-     alt="avatar"
-      />
-      
+  src={avatarImg}
+  alt="avatar"
+  className="w-40 h-40 md:w-72 md:h-72 rounded-full object-cover mx-auto md:mx-0 shadow-lg shadow-indigo-500/50 animate-shadowPulse"
+/>
+      </div>
     </div>
   );
 };
